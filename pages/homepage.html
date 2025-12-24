@@ -12,6 +12,27 @@
   <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fperformanc5485back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.12"></script>
   <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
   </head>
+<script>
+  const revealItems = document.querySelectorAll(
+    'section, .card, .container > div'
+  );
+
+  revealItems.forEach(el => el.classList.add('reveal'));
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  revealItems.forEach(el => observer.observe(el));
+</script>
 
 <body class="bg-black text-text-primary">
     
