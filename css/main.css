@@ -1734,3 +1734,81 @@ h1, h2, h3, h4, h5, h6{
     letter-spacing: -0.02em;
   }
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;              /* was 500 */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* 2. Hero text punch */
+#hero h1 {
+  text-shadow: 0 8px 40px rgba(0, 0, 0, 0.85);
+}
+
+#hero p {
+  letter-spacing: 0.12em;
+}
+
+/* 3. Stronger video overlay (more contrast, better readability) */
+#hero .bg-gradient-to-r {
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.2)
+  );
+}
+
+/* 4. Buttons feel heavier */
+.btn {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  letter-spacing: 0.15em;
+}
+
+/* 5. Button hover = aggressive */
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 32px rgba(255, 107, 53, 0.6);
+}
+
+.btn-primary:active {
+  transform: scale(0.96);
+}
+
+/* 6. Class cards: cinematic hover */
+.card video {
+  transition: transform 600ms ease;
+}
+
+.card:hover video {
+  transform: scale(1.1);
+}
+
+/* Darker overlay on class cards */
+.card > div {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+/* 7. Card titles more impact */
+.card h3 {
+  letter-spacing: 0.18em;
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.9);
+}
+
+/* 8. Header slightly more premium */
+header {
+  border-bottom: 2px solid rgba(255, 107, 53, 0.35);
+}
+
+/* 9. Nav links feel tougher */
+header nav a {
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+/* 10. Stats pop more */
+#hero .text-display-sm {
+  font-size: 2rem;
+}
